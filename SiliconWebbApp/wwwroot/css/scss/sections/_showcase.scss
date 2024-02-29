@@ -1,0 +1,62 @@
+.showcase {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 5%;
+    @include text-m;
+    color: $gray-600;
+
+
+    .background-img {
+        position: relative;
+        width: 100%;
+    }
+
+    .container {
+        padding-left: 15%;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            @include d4;
+            width: 80%;
+
+            @media (max-width:768px) {
+                @include h3;
+            }
+        }
+
+        p {
+            width: 80%;
+
+            @media (max-width:768px) {
+                font-size: 10px;
+            }
+        }
+
+        h5 {
+            @include h6;
+            width: 75%;
+        }
+
+        .btn-theme-s {
+            width: 30%;
+            height: 15%;
+            display: inline-block;
+            margin-top: 10%;
+            margin-bottom: 15%;
+        }
+
+        .companies {
+            padding-top: 16px;
+
+            img {
+                margin-right: 10px;
+                height: 40px;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+#create-account{
+    padding-top: 100px;
+    @include text-m;
+    color: $gray-700;
+    .headline{
+        padding-bottom: 30px;
+        width: 40%;
+        h3{
+            font-weight: 900;
+            color: $gray-900;
+        }
+    }
+
+    .create{
+        .btn-theme{
+            padding: 12px;
+            width: 45%;
+        }
+        .text-l{
+            color: $gray-900;
+            font-weight: 900;
+            margin: 15px 0px 0px 0px; 
+        }
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+        .name-fields{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            input{
+                width: 260px;
+                margin: 0;
+                padding: 0;
+                padding-left: 10px;
+                outline: none;
+            }
+
+
+        }
+        .input-field{
+            width: 535px;
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            padding-left: 15px;
+            outline: none;
+            border-radius: 7px;
+            border: 1px solid  #D4D7E5;;
+
+
+
+        }
+        .agree{
+            padding: 20px 0px 20px 0px;
+            width: 40%;
+        }
+    }
+
+
+}

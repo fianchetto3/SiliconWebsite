@@ -1,0 +1,61 @@
+
+#sign-in{
+    padding-top: 100px;
+    @include text-m;
+    color: $gray-700;
+    .sign-in-box{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+           
+            .headline{
+                padding-bottom: 30px;
+                width: 39%;
+                h3{
+                    font-weight: 900;
+                    color: $gray-900;
+                }
+            }
+            a{
+                text-decoration: none;
+                margin-top: 15px;
+            }
+            .btn-theme{
+                height: 25%;
+                width: 40%;
+            }
+
+        .remember-me{
+            padding: 20px 0px 20px 0px;
+            width: 38%;
+            
+        }    
+        .bars{
+            .text-l{
+                color: $gray-900;
+                font-weight: 900;
+                margin: 15px 0px 0px 0px; 
+            }
+
+            label{
+                input{
+                    border: 1px solid  #D4D7E5;;
+                    outline: none;
+                    width: 500px;
+                    height: 50px;
+                    border-radius: 7px;
+                    padding-left: 15px;
+                  
+                }
+            }
+
+        }
+    }
+}
+footer{
+   
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+   
+}
