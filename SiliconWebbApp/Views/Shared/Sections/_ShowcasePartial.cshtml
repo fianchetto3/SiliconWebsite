@@ -5,7 +5,7 @@
     <div class="container">
         <div class="content">
             <h2>@Model.Title</h2>
-            <p class="text-l">We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool.</p>
+            <p class="text-l">@Model.Text</p>
             <a class="btn-theme-s" asp-controller="@Model.Link.ControllerName" asp-action="@Model.Link.ActionName" >@Model.Link.Text</a>
             <h5>@Model.BrandText</h5>
             <div class="companies">
@@ -20,5 +20,5 @@
         </div>
 
     </div>
-    <img class="background-img" src="@Model.ShowcaseImage" alt="@Model.ShowcaseImage.AltText">
+    <img class="background-img" src="@Model.ShowcaseImage.ImageUrl" alt="@Model.ShowcaseImage.AltText">
 </section>

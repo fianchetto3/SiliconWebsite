@@ -17,7 +17,7 @@ public class HomeController : Controller
             {
                 Title = "Task Management Assistant You Gonna Love",
                 Text = "We offer you a new generation of task management system. Plan, manage & track all your tasks in one flexible tool.",
-                BrandText = "Home",
+                BrandText = "Largest companies use our tool to work efficiently",
                 Id = "showcase",
                 Brands =
                 [

@@ -1,5 +1,6 @@
 ﻿using SiliconWebbApp.Models.Sections;
 
+
 namespace SiliconWebbApp.Models.Views
 {
     public class HomeIndexViewModel
