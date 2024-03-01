@@ -382,23 +382,23 @@ a:hover {
 }
 
 footer {
-  padding: 50px 0 30px 0;
+  padding-top: 50px;
   line-height: 160%;
   font-weight: 400;
   color: #565973;
   font-family: "Manrope", sans-serif;
   font-size: 16px !important;
-  color: #9397AD;
 }
-footer .container {
-  text-align: center;
-}
-footer .container .social-media {
+footer .socials {
   display: flex;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
-  margin-bottom: 30px;
+  justify-content: center;
+  gap: 16px;
+}
+footer .copyright p {
+  text-align: center;
+  word-break: break-all;
+  padding: 20px;
 }
 
 .showcase {
@@ -598,12 +598,6 @@ footer .container .social-media {
   height: 50px;
   border-radius: 7px;
   padding-left: 15px;
-}
-
-footer {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
 }
 
 #create-account {
