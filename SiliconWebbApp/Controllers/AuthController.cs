@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using SiliconWebbApp.Models.Views;
 
 namespace SiliconWebbApp.Controllers;
 
@@ -7,6 +8,7 @@ public class AuthController : Controller
     [Route("/signup")]
     public IActionResult SignUp()
     {
-        return View();
+        var viewModel = new SignUpViewModel();
+        return View(viewModel);
     }
 }

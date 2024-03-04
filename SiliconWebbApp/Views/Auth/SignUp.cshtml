@@ -1,4 +1,37 @@
-﻿
+﻿@model SignUpViewModel
 @{
-    ViewData["Title"] = "Sign Up";
+    ViewData["Title"] = Model.Title;
 }
+<section id="create-account">
+    <div class="container">
+        <div class="create">
+            <div class="headline">
+                <h3 class="h1">Create Account</h3>
+                <p>Already have an Account? <a href="signin.html">Sign in Here.</a></p>
+            </div>
+            <div class="name-fields">
+                <label class="text-l">First Name</label>
+                <label class="text-l">Lastname</label>
+                <input class="input-field" type="text" placeholder="Enter your First Name">
+                <input class="input-field" type="text" placeholder="Enter your Last name">
+                </label>
+            </div>
+            <label>
+                <p class="text-l">Email Address</p>
+                <input class="input-field" type="email" placeholder="Enter your Email">
+            </label>
+            <label>
+                <p class="text-l">Password</p>
+                <input class="input-field" type="password" placeholder="******">
+            </label>
+            <label>
+                <p class="text-l">Confirm Password</p>
+                <input class="input-field" type="password" placeholder="******">
+            </label>
+            <div class="agree">
+                <input class="input-checkbox" type="checkbox"> I agree to the <a href="">Terms & Conditons.</a>
+            </div>
+            <a class="btn-theme" href="">Sign up</a>
+        </div>
+    </div>
+</section>
