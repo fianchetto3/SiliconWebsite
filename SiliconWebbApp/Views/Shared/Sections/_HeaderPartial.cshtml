@@ -1,0 +1,33 @@
+﻿<header class="header">
+    <div class="container">
+        <a  asp-controller="Home" asp-action="Index" id="logo">
+            <img src="/images/company-icon.svg" alt="silicon logo">
+        </a>
+
+        <div class="header-menu" id="menu">
+            <nav>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="overview">Overview</a>
+                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
+                <a class="menu-link" href="#"> Contact</a>
+            </nav>
+        </div>
+
+        <div class="btn-switch">
+            <span>Light</span>
+            <div class="switch">
+                <input type="checkbox" id="switch" role="switch">
+                <label for="switch" class="slider round"></label>
+            </div>
+            <span>Dark</span>
+
+        </div>
+
+        <div class="account-buttons">
+            <a class="btn-gray" href="/signin.html"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</a>
+            <a href="/signup.html" class="btn-theme"><i class="fa-regular fa-user"></i>Sign Up</a>
+
+        </div>
+
+
+    </div>
+</header>

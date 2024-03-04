@@ -12,7 +12,7 @@ public class HomeController : Controller
         
         var viewModel = new HomeIndexViewModel
         {
-            Title = "Task Management Assistant You Gonna Love",
+            Title = "Home - Silicon",
             Showcase = new ShowcaseViewModel
             {
                 Title = "Task Management Assistant You Gonna Love",
