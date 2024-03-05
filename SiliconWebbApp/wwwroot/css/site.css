@@ -358,6 +358,59 @@ a:hover {
   color: #FFFFFF;
 }
 
+form {
+  width: 100%;
+  display: grid;
+}
+form .input-group {
+  display: grid;
+}
+form .checkbox-group {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 0.5rem;
+}
+form .checkbox-group input[type=checkbox] {
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 0.63rem solid red;
+}
+form .checkbox-group label {
+  margin: 0;
+  font-weight: 400;
+}
+form label {
+  margin-bottom: 0.188rem;
+  font-weight: 700;
+}
+form input {
+  padding: 1rem;
+  border-radius: 0.5rem !important;
+  border: 0.063rem solid #D4D7E5;
+}
+form input::placerholder {
+  opacity: 0.4;
+}
+form input.input-validation-error {
+  border: 0.63rem solid #EF4444 !important;
+  color: #EF4444;
+}
+form input.input-validation-error::placeholder {
+  color: #EF4444;
+}
+form span.field-validation-error {
+  position: absolute;
+  top: 0;
+  right: 0;
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 14px !important;
+  color: #EF4444;
+}
+
 .header {
   padding: 15px 0;
 }
@@ -552,108 +605,42 @@ footer .copyright p {
   border-top: none;
 }
 
-#sign-in {
-  padding-top: 100px;
-  line-height: 160%;
-  font-weight: 400;
-  color: #565973;
-  font-family: "Manrope", sans-serif;
-  font-size: 16px !important;
-  color: #565973;
-}
-#sign-in .sign-in-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-#sign-in .sign-in-box .headline {
-  padding-bottom: 30px;
-  width: 39%;
-}
-#sign-in .sign-in-box .headline h3 {
-  font-weight: 900;
-  color: #0B0F19;
-}
-#sign-in .sign-in-box a {
-  text-decoration: none;
-  margin-top: 15px;
-}
-#sign-in .sign-in-box .btn-theme {
-  height: 25%;
-  width: 40%;
-}
-#sign-in .sign-in-box .remember-me {
-  padding: 20px 0px 20px 0px;
-  width: 38%;
-}
-#sign-in .sign-in-box .bars .text-l {
-  color: #0B0F19;
-  font-weight: 900;
-  margin: 15px 0px 0px 0px;
-}
-#sign-in .sign-in-box .bars label input {
-  border: 1px solid #D4D7E5;
-  outline: none;
-  width: 500px;
-  height: 50px;
-  border-radius: 7px;
-  padding-left: 15px;
-}
-
 #create-account {
-  padding-top: 100px;
-  line-height: 160%;
-  font-weight: 400;
-  color: #565973;
-  font-family: "Manrope", sans-serif;
-  font-size: 16px !important;
-  color: #565973;
+  height: 100%;
 }
-#create-account .headline {
-  padding-bottom: 30px;
-  width: 40%;
-}
-#create-account .headline h3 {
-  font-weight: 900;
-  color: #0B0F19;
-}
-#create-account .create {
+#create-account .conatiner {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100%;
 }
-#create-account .create .btn-theme {
-  padding: 12px;
-  width: 45%;
+#create-account .conatiner form {
+  padding: 1rem;
 }
-#create-account .create .text-l {
-  color: #0B0F19;
-  font-weight: 900;
-  margin: 15px 0px 0px 0px;
-}
-#create-account .create .name-fields {
+#create-account .conatiner form .content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr;
 }
-#create-account .create .name-fields input {
-  width: 260px;
-  margin: 0;
-  padding: 0;
-  padding-left: 10px;
-  outline: none;
+#create-account .conatiner form .content #form-firstname {
+  grid-area: firstname;
 }
-#create-account .create .input-field {
-  width: 535px;
-  height: 50px;
-  margin: 0;
-  padding: 0;
-  padding-left: 15px;
-  outline: none;
-  border-radius: 7px;
-  border: 1px solid #D4D7E5;
+#create-account .conatiner form .content #form-lastname {
+  grid-area: lastname;
 }
-#create-account .create .agree {
-  padding: 20px 0px 20px 0px;
-  width: 40%;
+#create-account .conatiner form .content #form-email {
+  grid-area: email;
+}
+#create-account .conatiner form .content #form-password {
+  grid-area: password;
+}
+#create-account .conatiner form .content #form-confirm {
+  grid-area: confirm;
+}
+#create-account .conatiner form .content #form-terms {
+  grid-area: terms;
+  padding: 1rem 0;
+}
+#create-account .conatiner form .content #form-submit {
+  grid-area: button;
 }
