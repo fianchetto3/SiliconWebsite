@@ -4,34 +4,47 @@
 }
 <section id="create-account">
     <div class="container">
-        <div class="create">
-            <div class="headline">
-                <h3 class="h1">Create Account</h3>
-                <p>Already have an Account? <a href="signin.html">Sign in Here.</a></p>
+        <form method="post" asp-controller="Auth" asp-action="SignUp" novalidate >
+            <h1> Create Account</h1>
+            <p>Already have an Account? <a asp-controller="Auth" asp-action="SignIn" >Sign in here  </a>.</p>
+
+            <div class="content">
+                <div id="form-firstname" class="input-group">
+                    <label asp-for="Form.FirstName"></label>
+                    <span asp-validation-for="Form.FirstName"></span>
+                    <input asp-for="Form.FirstName" />
+                </div>
+                <div id="form-lastname" class="input-group">
+                    <label asp-for="Form.LastName"></label>
+                    <span asp-validation-for="Form.LastName"></span>
+                    <input asp-for="Form.LastName" />
+                </div>
+                <div id="form-email" class="input-group">
+                    <label asp-for="Form.Email"></label>
+                    <span asp-validation-for="Form.Email"></span>
+                    <input asp-for="Form.Email" />
+                </div>
+                <div id="form-password" class="input-group">
+                    <label asp-for="Form.Password"></label>
+                    <span asp-validation-for="Form.Password"></span>
+                    <input asp-for="Form.Password" />
+                </div>
+                <div id="form-confirmpassword" class="input-group">
+                    <label asp-for="Form.ConfirmPassword"></label>
+                    <span asp-validation-for="Form.ConfirmPassword"></span>
+                    <input asp-for="Form.ConfirmPassword" />
+                </div>
+                <div id="form-terms" class="checkbox-group">
+                    <input asp-for="Form.TermsAndCondition" />
+                    <label asp-for="Form.TermsAndCondition"> I agree to the <a asp-controller="About" asp-action="Terms">Terms</a> & <a asp-controller="About" asp-action="Conditions">Conditions</a>. </label>
+                    <span asp-validation-for="Form.TermsAndCondition"></span>
+                  
+                </div>
             </div>
-            <div class="name-fields">
-                <label class="text-l">First Name</label>
-                <label class="text-l">Lastname</label>
-                <input class="input-field" type="text" placeholder="Enter your First Name">
-                <input class="input-field" type="text" placeholder="Enter your Last name">
-                </label>
-            </div>
-            <label>
-                <p class="text-l">Email Address</p>
-                <input class="input-field" type="email" placeholder="Enter your Email">
-            </label>
-            <label>
-                <p class="text-l">Password</p>
-                <input class="input-field" type="password" placeholder="******">
-            </label>
-            <label>
-                <p class="text-l">Confirm Password</p>
-                <input class="input-field" type="password" placeholder="******">
-            </label>
-            <div class="agree">
-                <input class="input-checkbox" type="checkbox"> I agree to the <a href="">Terms & Conditons.</a>
-            </div>
-            <a class="btn-theme" href="">Sign up</a>
-        </div>
+
+            <button id=" form-submit" class="btn-theme-s" type="submit">@Model.Title</button>
+
+
+        </form>
     </div>
 </section>

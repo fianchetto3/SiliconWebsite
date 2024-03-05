@@ -1,0 +1,50 @@
+
+#create-account {
+    height: 100%;
+
+    .conatiner {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        form {
+            padding: 1rem;
+
+            .content {
+                display: grid;
+                gap: 1rem 2rem;
+                grid-template-columns: 1fr;
+                grid-template-areas: "firstname lastname" "email" "password" "confirm" "terms" "button";
+
+                #form-firstname {
+                    grid-area: firstname;
+                }
+
+                #form-lastname {
+                    grid-area: lastname;
+                }
+
+                #form-email {
+                    grid-area: email;
+                }
+
+                #form-password {
+                    grid-area: password;
+                }
+
+                #form-confirm {
+                    grid-area: confirm;
+                }
+
+                #form-terms {
+                    grid-area: terms;
+                    padding: 1rem 0;
+                }
+                #form-submit{
+                    grid-area: button;
+                }
+            }
+        }
+    }
+}
