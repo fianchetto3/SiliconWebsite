@@ -374,7 +374,7 @@ form .checkbox-group {
 form .checkbox-group input[type=checkbox] {
   height: 1.2rem;
   width: 1.2rem;
-  border: 0.63rem solid red;
+  border: 0.063rem solid red;
 }
 form .checkbox-group label {
   margin: 0;
@@ -389,7 +389,7 @@ form input {
   border-radius: 0.5rem !important;
   border: 0.063rem solid #D4D7E5;
 }
-form input::placerholder {
+form input::placeholder {
   opacity: 0.4;
 }
 form input.input-validation-error {
@@ -606,41 +606,57 @@ footer .copyright p {
 }
 
 #create-account {
+  padding: 100px;
   height: 100%;
 }
-#create-account .conatiner {
+#create-account .container {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%;
 }
-#create-account .conatiner form {
+@media (min-width: 992px) {
+  #create-account .container {
+    width: 60%;
+  }
+}
+@media (min-width: 1200px) {
+  #create-account .container {
+    width: 40%;
+  }
+}
+#create-account .container form {
   padding: 1rem;
 }
-#create-account .conatiner form .content {
-  display: grid;
-  gap: 1rem 2rem;
-  grid-template-columns: 1fr;
+#create-account .container form .content .input-names-group {
+  display: flex;
+  gap: 20px;
 }
-#create-account .conatiner form .content #form-firstname {
+@media (min-width: 768px) {
+  #create-account .container form .content {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "firstname" "lastname" "email email" "password password" "confirmpassword confirmpassword" "terms" "submit";
+  }
+}
+#create-account .container form .content #form-firstname {
   grid-area: firstname;
 }
-#create-account .conatiner form .content #form-lastname {
+#create-account .container form .content #form-lastname {
   grid-area: lastname;
 }
-#create-account .conatiner form .content #form-email {
+#create-account .container form .content #form-email {
   grid-area: email;
 }
-#create-account .conatiner form .content #form-password {
+#create-account .container form .content #form-password {
   grid-area: password;
 }
-#create-account .conatiner form .content #form-confirm {
-  grid-area: confirm;
+#create-account .container form .content #form-confirmpassword {
+  grid-area: confirmpassword;
 }
-#create-account .conatiner form .content #form-terms {
+#create-account .container form .content #form-terms {
   grid-area: terms;
   padding: 1rem 0;
 }
-#create-account .conatiner form .content #form-submit {
-  grid-area: button;
+#create-account .container form .content #form-submit {
+  grid-area: submit;
 }
