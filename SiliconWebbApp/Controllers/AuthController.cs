@@ -24,4 +24,13 @@ public class AuthController : Controller
         
        
     }
+
+    [Route("/signin")]
+    [HttpGet]
+    public IActionResult SignIn()
+    {
+        var viewModel = new SignInViewModel();
+        return View(viewModel);
+    }
+
 }

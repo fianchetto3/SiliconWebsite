@@ -618,9 +618,11 @@ footer .copyright p {
   padding: 1rem;
 }
 #create-account .conatiner form .content {
-  display: grid;
-  gap: 1rem 2rem;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
+}
+#create-account .conatiner form .content .names {
+  display: flex;
 }
 #create-account .conatiner form .content #form-firstname {
   grid-area: firstname;
