@@ -1,0 +1,26 @@
+#sign-in {
+    height: 100%;
+    padding-top: 100px;
+
+    .container {
+        height: 100%;
+        width: 25%;
+
+        form {
+             gap: 1rem 2rem;
+             
+             a{
+                 text-decoration:none;
+             }
+
+            .content {
+                display: grid;
+                gap: 20px;
+            }
+
+            #form-forgot-password {
+                text-align: center;
+            }
+        }
+    }
+}

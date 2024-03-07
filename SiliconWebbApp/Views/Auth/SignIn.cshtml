@@ -4,8 +4,8 @@
 }
 <section id="sign-in">
     <div class="container">
-        <form method="post" asp-controller="Auth" asp-action="SignUp" novalidate>
-            <div asp-validation-summary="All" ></div>
+        <form method="post" asp-controller="Auth" asp-action="SignIn" novalidate>
+            
 
             <h1> Welcome Back</h1>
             <p>Don't have an account yet? <a asp-controller="Auth" asp-action="SignUp">Sign in here  </a>.</p>
@@ -27,7 +27,7 @@
                 </div>
             </div>
 
-            <button id=" form-submit" class="btn-theme-s" type="submit">@Model.Title</button>
+            <button id="form-submit" class="btn-theme-s" type="submit">@Model.Title</button>
             
             <a id="form-forgot-password" asp-controller="Account" asp-action="Forgot" >Forgot your Password?</a>
 

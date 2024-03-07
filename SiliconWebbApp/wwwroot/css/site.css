@@ -618,11 +618,9 @@ footer .copyright p {
   padding: 1rem;
 }
 #create-account .conatiner form .content {
-  display: flex;
-  flex-direction: column;
-}
-#create-account .conatiner form .content .names {
-  display: flex;
+  display: grid;
+  gap: 1rem 2rem;
+  grid-template-columns: 1fr;
 }
 #create-account .conatiner form .content #form-firstname {
   grid-area: firstname;
@@ -645,4 +643,26 @@ footer .copyright p {
 }
 #create-account .conatiner form .content #form-submit {
   grid-area: button;
+}
+
+#sign-in {
+  height: 100%;
+  padding-top: 100px;
+}
+#sign-in .container {
+  height: 100%;
+  width: 25%;
+}
+#sign-in .container form {
+  gap: 1rem 2rem;
+}
+#sign-in .container form a {
+  text-decoration: none;
+}
+#sign-in .container form .content {
+  display: grid;
+  gap: 20px;
+}
+#sign-in .container form #form-forgot-password {
+  text-align: center;
 }
