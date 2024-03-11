@@ -374,7 +374,7 @@ form .checkbox-group {
 form .checkbox-group input[type=checkbox] {
   height: 1.2rem;
   width: 1.2rem;
-  border: 0.63rem solid red;
+  border: 0.063rem solid red;
 }
 form .checkbox-group label {
   margin: 0;
@@ -389,7 +389,7 @@ form input {
   border-radius: 0.5rem !important;
   border: 0.063rem solid #D4D7E5;
 }
-form input::placerholder {
+form input::placeholder {
   opacity: 0.4;
 }
 form input.input-validation-error {
