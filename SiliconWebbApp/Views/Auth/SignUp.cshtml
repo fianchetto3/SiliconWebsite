@@ -4,12 +4,16 @@
 }
 <section id="create-account">
     <div class="container">
-        <form method="post" asp-controller="Auth" asp-action="SignUp" novalidate >
+        <form method="post" asp-controller="Auth" asp-action="SignUp" novalidate>
             <h1> Create Account</h1>
-            <p>Already have an Account? <a asp-controller="Auth" asp-action="SignIn" >Sign in here  </a>.</p>
+            <p>Already have an Account? <a asp-controller="Auth" asp-action="SignIn">Sign in here  </a>.</p>
 
             <div class="content">
+
+
+
                <div class="input-names-group">
+
                     <div id="form-firstname" class="input-group">
                         <label class="text-1" asp-for="Form.FirstName"></label>
                         <span asp-validation-for="Form.FirstName"></span>
@@ -20,7 +24,11 @@
                         <span asp-validation-for="Form.LastName"></span>
                         <input asp-for="Form.LastName" />
                     </div>
-               </div>
+
+                </div>
+
+        
+
 
                 <div id="form-email" class="input-group">
                     <label class="text-1" asp-for="Form.Email"></label>
@@ -41,7 +49,7 @@
                     <input asp-for="Form.TermsAndCondition" />
                     <label  asp-for="Form.TermsAndCondition"> I agree to the <a asp-controller="About" asp-action="Terms">Terms</a> & <a asp-controller="About" asp-action="Conditions">Conditions</a>. </label>
                     <span asp-validation-for="Form.TermsAndCondition"></span>
-                  
+
                 </div>
             </div>
 
