@@ -1,0 +1,64 @@
+#create-account {
+    padding: 100px;
+    height: 100%;
+
+    .container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+
+        @include lg {
+            width: 60%;
+        }
+
+        @include xl {
+            width: 40%;
+        }
+
+        form {
+            padding: 1rem;
+
+            .content {
+                .input-names-group {
+                    display: flex;
+                    gap: 20px;
+                }
+
+                @include md {
+                    grid-template-columns: 1fr 1fr;
+                    grid-template-areas: "firstname" "lastname" "email email" "password password" "confirmpassword confirmpassword" "terms" "submit";
+                }
+
+                #form-firstname {
+                    grid-area: firstname;
+                }
+
+                #form-lastname {
+                    grid-area: lastname;
+                }
+
+                #form-email {
+                    grid-area: email;
+                }
+
+                #form-password {
+                    grid-area: password;
+                }
+
+                #form-confirmpassword {
+                    grid-area: confirmpassword;
+                }
+
+                #form-terms {
+                    grid-area: terms;
+                    padding: 1rem 0;
+                }
+
+                #form-submit {
+                    grid-area: submit;
+                }
+            }
+        }
+    }
+}
