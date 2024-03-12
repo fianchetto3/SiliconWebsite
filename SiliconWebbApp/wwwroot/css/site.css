@@ -605,6 +605,28 @@ footer .copyright p {
   border-top: none;
 }
 
+#sign-in {
+  height: 100%;
+  padding-top: 100px;
+}
+#sign-in .container {
+  height: 100%;
+  width: 25%;
+}
+#sign-in .container form {
+  gap: 1rem 2rem;
+}
+#sign-in .container form a {
+  text-decoration: none;
+}
+#sign-in .container form .content {
+  display: grid;
+  gap: 20px;
+}
+#sign-in .container form #form-forgot-password {
+  text-align: center;
+}
+
 #create-account {
   padding: 100px;
   height: 100%;
