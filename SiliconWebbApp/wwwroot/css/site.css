@@ -676,6 +676,8 @@ footer .copyright p {
   grid-area: confirmpassword;
 }
 #create-account .container form .content #form-terms {
+  display: flex;
+  gap: 12px;
   grid-area: terms;
   padding: 1rem 0;
 }

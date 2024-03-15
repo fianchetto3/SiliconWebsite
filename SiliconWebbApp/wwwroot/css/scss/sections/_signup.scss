@@ -55,6 +55,8 @@
                 }
 
                 #form-terms {
+                    display: flex;
+                    gap: 12px;
                     grid-area: terms;
                     padding: 1rem 0;
                 }
