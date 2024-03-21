@@ -1,4 +1,4 @@
-﻿using SiliconWebbApp.Models.Form;
+﻿using Infrastructure.Model;
 
 namespace SiliconWebbApp.Models.Views
 {

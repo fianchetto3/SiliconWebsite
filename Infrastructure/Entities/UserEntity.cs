@@ -16,7 +16,7 @@ public class UserEntity
 
     public string Password { get; set; } = null!;
 
-    public string SecurityKey { get; set; } = null!;
+    public string? SecurityKey { get; set; } 
 
     public string? Phone { get; set; }
 
