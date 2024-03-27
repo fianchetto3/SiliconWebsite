@@ -34,7 +34,8 @@ public class UserRepository(DataContext context) : Repo<UserEntity>(context)
         {
             var result = await _context.Set<UserEntity>()
                 .Include(i => i.Address)
-                .FirstOrDefaultAsync();
+                .FirstOrDefaultAsync(predicate); 
+
             if (result == null)
                 return ResponseFactory.NotFound();
 
@@ -43,7 +44,6 @@ public class UserRepository(DataContext context) : Repo<UserEntity>(context)
         catch (Exception ex)
         {
             return ResponseFactory.Error(ex.Message);
-
         }
     }
 }

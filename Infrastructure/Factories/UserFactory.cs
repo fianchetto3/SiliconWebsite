@@ -1,16 +1,20 @@
-﻿using Infrastructure.Entities;
+﻿using Azure;
+using Infrastructure.Entities;
 using Infrastructure.Helpers;
 using Infrastructure.Model;
+using Infrastructure.Repo;
 
 namespace Infrastructure.Factories
 {
-    public class UserFactory
+    public class UserFactory(UserRepository repository)
     {
+        private readonly UserRepository _repository = repository;
+
         public static UserEntity Create()
         {
             try
             {
-                var date = DateTime.Now;    
+                var date = DateTime.Now;
 
                 return new UserEntity()
                 {
@@ -56,6 +60,5 @@ namespace Infrastructure.Factories
             return null!;
 
         }
-
     }
 }

@@ -5,6 +5,13 @@ using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddAuthentication("AuthCookie").AddCookie("AuthCookie", x =>
+{
+    x.LoginPath = "/signin";
+    x.ExpireTimeSpan = TimeSpan.FromMinutes(60);
+});
+
+
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 

@@ -1,6 +1,9 @@
-﻿using Infrastructure.Services;
+﻿using Infrastructure.Model;
+using Infrastructure.Services;
+using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Mvc;
 using SiliconWebbApp.Models.Views;
+using System.Security.Claims;
 
 namespace SiliconWebbApp.Controllers;
 
@@ -41,15 +44,37 @@ public class AuthController(UserService userService) : Controller
 
     [Route("/signin")]
     [HttpPost]
-    public IActionResult SignIn(SignInViewModel viewModel)
+    public async Task<IActionResult> SignIn(SignInViewModel viewModel)
     {
         if (!ModelState.IsValid)
-           
+        {
+            var userModel = await _userService.SignInAsync(viewModel.Form);
+             if (userModel != null)
+            {
+                var claims = new List<Claim>
+                {
+                    new(ClaimTypes.NameIdentifier, userModel.Id),
+                    new(ClaimTypes.Name, userModel.Email),
+                    new(ClaimTypes.Email, userModel.Email),
+
+                };
+
+                await HttpContext.SignInAsync("AuthCookie", new ClaimsPrincipal(new ClaimsIdentity(claims, "AuthCookie")));
+                return RedirectToAction("Index", "Account");
+            }
+                
+
+        }
             return View(viewModel);
-
-        return RedirectToAction("Account", "Index");
-
-
     }
+
+    [HttpGet]
+    public new async Task<IActionResult> SignOut()
+    {
+       await HttpContext.SignOutAsync();
+        return RedirectToAction("Index", "Account");
+    }
+
+
 
 }
