@@ -1,7 +1,6 @@
-using Infrastructure.Context;
-using Infrastructure.Repo;
-using Infrastructure.Services;
 using Microsoft.EntityFrameworkCore;
+using SiliconInfrastructure.Context;
+using SiliconInfrastructure.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,11 +14,18 @@ builder.Services.AddAuthentication("AuthCookie").AddCookie("AuthCookie", x =>
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddDbContext<DataContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
-builder.Services.AddScoped<AddressRepository>();
-builder.Services.AddScoped<UserRepository>();
-builder.Services.AddScoped<AddressService>();
-builder.Services.AddScoped<UserService>();
+builder.Services.AddDbContext<AppDbContext>(x => x.UseSqlServer(builder.Configuration.GetConnectionString("SqlServer")));
+
+builder.Services.AddDefaultIdentity<UserEntity>(x =>
+{
+    x.User.RequireUniqueEmail = true;
+    x.SignIn.RequireConfirmedAccount = false;
+    x.Password.RequiredLength = 8;
+    x.Password.RequireNonAlphanumeric = false;
+    
+
+}) .AddEntityFrameworkStores<AppDbContext>();
+
 
 
 var app = builder.Build();

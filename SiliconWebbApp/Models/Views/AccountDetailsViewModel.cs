@@ -1,9 +1,12 @@
-﻿using SiliconWebbApp.Models.Account;
+﻿using Infrastructure.Entities;
+using Infrastructure.Model;
+using SiliconWebbApp.Models.Account;
 
 namespace SiliconWebbApp.Models.Views;
 
 public class AccountDetailsViewModel
 {
+
     public string Title { get; set; } = "Account Details";
 
     public AccountDetailsBasicInfo BasicInfo { get; set; } = new AccountDetailsBasicInfo()

@@ -6,9 +6,19 @@
 
         <div class="header-menu" id="menu">
             <nav>
-                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="overview">Overview</a>
-                <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
-                <a class="menu-link" href="#"> Contact</a>
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="overview">Overview</a>
+                    <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="courses">Courses</a>
+                    <a class="menu-link" href="#"> Contact</a>
+                }
+                else
+                {
+                    <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="overview">Overview</a>
+                    <a class="menu-link" asp-controller="Home" asp-action="Index" asp-fragment="features">Features</a>
+                    <a class="menu-link" href="#"> Contact</a>
+                }
+
             </nav>
         </div>
 
@@ -23,8 +33,16 @@
         </div>
 
         <div class="account-buttons">
-            <a class="btn-gray" asp-controller="Auth" asp-action="SignIn" ><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</a>
-            <a asp-controller="Auth" asp-action="SignUp" class="btn-theme"><i class="fa-regular fa-user"></i>Sign Up</a>
+            @if (User.Identity.IsAuthenticated)
+            {
+                <a class="btn-gray" asp-controller="Auth" asp-action="SignOut"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign Out</a>
+            }
+            else
+            {
+                <a class="btn-gray" asp-controller="Auth" asp-action="SignIn"><i class="fa-solid fa-arrow-right-to-bracket"></i>Sign in</a>
+                <a asp-controller="Auth" asp-action="SignUp" class="btn-theme"><i class="fa-regular fa-user"></i>Sign Up</a>
+            }
+
 
         </div>
 

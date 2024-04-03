@@ -30,7 +30,6 @@ namespace SiliconWebbApp.Models.Account
 
         [Display(Name = "Phone", Prompt = "Enter your Phone", Order = 3)]
         [DataType(DataType.PhoneNumber)]
-        [Required(ErrorMessage = "Phone is required")]
         public string Phone { get; set; } = null!;
 
         [Display(Name = "Bio", Prompt = "Add a short bio...", Order = 4)]

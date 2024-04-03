@@ -1,17 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
+using SiliconInfrastructure.Entities;
 using SiliconWebbApp.Models.Views;
 
 namespace SiliconWebbApp.Controllers
 {
-    public class AccountController : Controller
+    public class AccountController(UserManager<UserEntity> userManager) : Controller
     {
+        private readonly UserManager<UserEntity> _userManager = userManager;
 
-        [Route("/account")]
+        [Route("/account/details")]
         public IActionResult Details() 
         {
             var viewModel = new AccountDetailsViewModel();
-            //viewModel.BasicInfo = _accountservice.GetBasicInfo();
-            //viewModel.AddressInfo = _accountService.GetAddressInfo();
+            
             return View(viewModel);
             
         }
@@ -19,15 +22,26 @@ namespace SiliconWebbApp.Controllers
         [HttpPost]
         public IActionResult BasicInfo(AccountDetailsViewModel viewModel)
         {
-           //_accountService.SaveBasicInfo(viewModel.BasicInfo)
-            return RedirectToAction(nameof(Details), viewModel);
+            if(TryValidateModel(viewModel.BasicInfo))
+            {
+                return RedirectToAction("Home", "Index");
+            }
+            return View("Details", viewModel);
+
+           
+            
         }
 
         [HttpPost]
         public IActionResult AddressInfo(AccountDetailsViewModel viewModel)
         {
-            //_accountService.SaveAddressInfo(viewModel.AddressInfo)
-            return RedirectToAction(nameof(Details), viewModel);
+            if (TryValidateModel(viewModel.AddressInfo))
+            {
+                return RedirectToAction("Home", "Index");
+            }
+            return View("Details", viewModel);
+
+
         }
 
     }

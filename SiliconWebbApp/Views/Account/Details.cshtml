@@ -21,7 +21,7 @@
         </aside>
         <div class="details">
             <section class="basic-info">
-                <form method="post" asp-controller="Account" asp-action="BasicInfo">
+                <form method="post" asp-controller="Account" asp-action="BasicInfo" novalidate >
                     <h2>Account Details</h2>
                     <h5>Basic Info</h5>
 
@@ -53,14 +53,14 @@
                         </div>
                         <div class="form-buttons">
                             <button class="btn-gray" type="reset" >Cancel </button>
-                            <button class="btn-theme" type="submit">Save Changes</button>
+                            <button class="btn-theme" type="submit" name="BasicInfo" >Save Changes</button>
                         </div>
                     </div>
                 </form>
             </section>
             <hr />
             <section class="address-info">
-                <form method="post" asp-controller="Account" asp-action="AddressInfo">
+                <form method="post" asp-controller="Account" asp-action="AddressInfo" novalidate >
                     <h5>Address</h5>
                     
                     <div class="content">
@@ -91,7 +91,7 @@
 
                         <div class="form-buttons">
                             <button class="btn-gray" type="reset">Cancel </button>
-                            <button class="btn-theme" type="submit">Save Changes</button>
+                            <button class="btn-theme" type="submit" name="AddressInfo" >Save Changes</button>
                         </div>
                     </div>
                 </form>

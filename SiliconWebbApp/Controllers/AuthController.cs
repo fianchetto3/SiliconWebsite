@@ -1,15 +1,21 @@
-﻿using Infrastructure.Model;
-using Infrastructure.Services;
-using Microsoft.AspNetCore.Authentication;
+﻿using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
+using SiliconInfrastructure.Entities;
 using SiliconWebbApp.Models.Views;
 using System.Security.Claims;
 
 namespace SiliconWebbApp.Controllers;
 
-public class AuthController(UserService userService) : Controller
+public class AuthController : Controller
 {
-    private readonly UserService _userService = userService;
+    private readonly UserManager<UserEntity> _userManager;
+
+    public AuthController(UserManager<UserEntity> userManager)
+    {
+        _userManager = userManager;
+    }
 
     [Route("/signup")]
     [HttpGet]
@@ -25,12 +31,33 @@ public class AuthController(UserService userService) : Controller
     {
         if (ModelState.IsValid)
         {
-            var result = await _userService.CreateUserAsync(viewModel.Form);
-            if (result.StatusCode == Infrastructure.Model.StatusCode.OK)
-                return RedirectToAction("SignIn", "Auth");
+            var exsist = await _userManager.Users.AnyAsync(x => x.Email == viewModel.Form.Email);
+            if (exsist)
+            {
+                ViewData["ErrorMessage"] = "User with Same Email Exsists";
+                return View(viewModel);
+            }
+
+            var userEntity = new UserEntity
+            {
+                FirstName = viewModel.Form.FirstName,
+                LastName = viewModel.Form.LastName,
+                Email = viewModel.Form.Email,
+                UserName = viewModel.Form.Email,
+                Bio = viewModel.Form.Bio 
+
+            };
+
+            var result =  await _userManager.CreateAsync(userEntity, viewModel.Form.Password);
+            if (result.Succeeded)
+            {
+                return RedirectToAction("SignIn", "Index");
+            }
+
 
         }
-          
+
+
         return View(viewModel);
     }
 
@@ -46,25 +73,7 @@ public class AuthController(UserService userService) : Controller
     [HttpPost]
     public async Task<IActionResult> SignIn(SignInViewModel viewModel)
     {
-        if (!ModelState.IsValid)
-        {
-            var userModel = await _userService.SignInAsync(viewModel.Form);
-             if (userModel != null)
-            {
-                var claims = new List<Claim>
-                {
-                    new(ClaimTypes.NameIdentifier, userModel.Id),
-                    new(ClaimTypes.Name, userModel.Email),
-                    new(ClaimTypes.Email, userModel.Email),
 
-                };
-
-                await HttpContext.SignInAsync("AuthCookie", new ClaimsPrincipal(new ClaimsIdentity(claims, "AuthCookie")));
-                return RedirectToAction("Index", "Account");
-            }
-                
-
-        }
             return View(viewModel);
     }
 
@@ -72,7 +81,7 @@ public class AuthController(UserService userService) : Controller
     public new async Task<IActionResult> SignOut()
     {
        await HttpContext.SignOutAsync();
-        return RedirectToAction("Index", "Account");
+        return RedirectToAction("Index", "Home");
     }
 
 
