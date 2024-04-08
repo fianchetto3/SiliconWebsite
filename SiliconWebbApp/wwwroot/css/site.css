@@ -613,6 +613,9 @@ footer .copyright p {
   height: 100%;
   width: 25%;
 }
+#sign-in .container .error {
+  color: #EF4444;
+}
 #sign-in .container form {
   gap: 1rem 2rem;
 }

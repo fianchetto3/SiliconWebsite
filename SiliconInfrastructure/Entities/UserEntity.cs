@@ -15,7 +15,7 @@ public class UserEntity : IdentityUser
     [ProtectedPersonalData]
     public string LastName { get; set; } = null!;
 
-    public string? Bio { get; set; } 
+    public string Bio { get; set; } = null!;
 
 
     public int? AddressId { get; set; }

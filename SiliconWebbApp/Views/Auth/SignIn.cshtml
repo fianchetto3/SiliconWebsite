@@ -4,20 +4,14 @@
 }
 <section id="sign-in">
     <div class="container">
-        <form method="post" asp-controller="Auth" asp-action="SignIn" novalidate>
+        <form id="signInForm" method="post" asp-controller="Auth" asp-action="SignIn"   novalidate>
 
-           
+           <div class="error" style="display: none;" ></div>
 
             <h1> Welcome Back</h1>
             <p>Don't have an account yet? <a asp-controller="Auth" asp-action="SignUp">Sign in here  </a>.</p>
 
             <div class="content">
-                <div id="error-message" class="error-display">
-                    <label asp-for="Form.ErrorMessage"></label>
-                    <span asp-validation-for="Form.ErrorMessage"></span>
-           
-                </div>
-
                 <div id="form-email" class="input-group">
                     <label asp-for="Form.Email"></label>
                     <span asp-validation-for="Form.Email"></span>

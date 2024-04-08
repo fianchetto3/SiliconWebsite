@@ -5,18 +5,17 @@ namespace SiliconWebbApp.Models.Form;
 
     public class SignInModel
     {
-        [Required(ErrorMessage = "Incorrect Password or Email.")]
-        public string? ErrorMessage { get; set; }
+        
 
         [DataType(DataType.EmailAddress)]
         [Display(Name = "Email", Prompt = "Enter your Email", Order = 0)]
-        [Required(ErrorMessage = "Email does not match or doesn't exist")]
+        [Required]
 
         public string Email { get; set; } = null!;
 
         [Display(Name = "Password", Prompt = "Enter your Password", Order = 1)]
         [DataType(DataType.Password)]
-        [Required(ErrorMessage = " ")]
+        [Required]
 
         public string Password { get; set; } = null!;
 
