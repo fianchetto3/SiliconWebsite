@@ -4,9 +4,7 @@ namespace SiliconWebbApp.Models.Account
 {
     public class AccountDetailsBasicInfo
     {
-
-        [DataType(DataType.ImageUrl)]
-        public string? ProfileImage { get; set; }
+        public string UserId { get; set; } = null!;
 
 
         [Display(Name = "First Name", Prompt = "Enter your first name", Order = 0)]
@@ -30,10 +28,10 @@ namespace SiliconWebbApp.Models.Account
 
         [Display(Name = "Phone", Prompt = "Enter your Phone", Order = 3)]
         [DataType(DataType.PhoneNumber)]
-        public string Phone { get; set; } = null!;
+        public string? Phone { get; set; }
 
-        [Display(Name = "Bio", Prompt = "Add a short bio...", Order = 4)]
+        [Display(Name = "Biography", Prompt = "Add a short bio...", Order = 4)]
         [DataType(DataType.MultilineText)]
-        public string? Biography { get; set; }
+        public string? Biography { get; set; }    
     }
 }

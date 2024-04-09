@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using SiliconInfrastructure.Context;
 using SiliconInfrastructure.Entities;
+using SiliconInfrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -26,7 +27,7 @@ builder.Services.AddDefaultIdentity<UserEntity>(x =>
 
 }) .AddEntityFrameworkStores<AppDbContext>();
 
-
+builder.Services.AddScoped<AddressManager>();
 
 var app = builder.Build();
 
