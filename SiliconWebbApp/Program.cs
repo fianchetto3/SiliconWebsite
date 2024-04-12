@@ -11,6 +11,7 @@ builder.Services.AddAuthentication("AuthCookie").AddCookie("AuthCookie", x =>
     x.ExpireTimeSpan = TimeSpan.FromMinutes(60);
 });
 
+builder.Services.AddHttpClient();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();

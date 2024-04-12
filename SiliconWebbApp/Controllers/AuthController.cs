@@ -51,7 +51,7 @@ public class AuthController(UserManager<UserEntity> userManager, SignInManager<U
             var result =  await _userManager.CreateAsync(userEntity, viewModel.Form.Password);
             if (result.Succeeded)
             {
-                return RedirectToAction("SignIn", "Index");
+                return RedirectToAction("Index", "SignIn");
             }
 
 
