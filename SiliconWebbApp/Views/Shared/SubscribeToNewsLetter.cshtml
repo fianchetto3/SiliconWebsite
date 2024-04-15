@@ -1,6 +1,6 @@
 ﻿@model SubscribeViewModel
 
-<section id="subscribe" class="subscribe">
+<section id="subscribe">
     <div class="container">
         <div class="title">
             <h2>Don't Want to Miss Anything</h2>
@@ -12,27 +12,27 @@
 
                 <div class="options">
                     <div class=" checkbox-group">
-                        <div class="input-group">
+                        <div class="input-group box">
                             <input asp-for="DailyNewsLetter" />
                             <label asp-for="DailyNewsLetter"></label>
                         </div>
                     </div>
                     <div class=" checkbox-group">
-                        <div class="input-group">
+                        <div class="input-group box">
                             <input asp-for="AdervtisingUpdates" />
                             <label asp-for="AdervtisingUpdates"></label>
                         </div>
 
                     </div>
                     <div class=" checkbox-group">
-                        <div class="input-group">
+                        <div class="input-group box">
                             <input asp-for="WeekInReview" />
                             <label asp-for="WeekInReview"></label>
                         </div>
 
                     </div>
                     <div class=" checkbox-group">
-                        <div class="input-group">
+                        <div class="input-group box">
                             <input asp-for="EventUpdates" />
                             <label asp-for="EventUpdates"></label>
                         </div>
@@ -59,7 +59,7 @@
                     <i class="fa-regular fa-envelope"></i>
                     <input asp-for="Email" />
                 </div>
-                <button type="submit" class="btn btn-theme"> Subscribe * </button>
+                <button type="submit" class="btn-theme"> Subscribe * </button>
              </div>
             @if (!string.IsNullOrEmpty(TempData["StatusMessage"]?.ToString()))
             {

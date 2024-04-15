@@ -35,6 +35,7 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\images\courses\" />
+    <Folder Include="wwwroot\images\uploads\profiles\" />
   </ItemGroup>
 
 </Project>

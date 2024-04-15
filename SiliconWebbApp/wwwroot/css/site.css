@@ -713,6 +713,19 @@ footer .copyright p {
   font-family: "Manrope", sans-serif;
   font-size: 16px !important;
 }
+#account-details aside .profile-info img {
+  position: relative;
+}
+#account-details aside .profile-info form .btn-gray {
+  background-color: #F3F6FF;
+  height: 15px;
+  width: 15px;
+  padding: 15px;
+  border-radius: 50%;
+  margin-left: 150px;
+  position: absolute;
+  top: 190px;
+}
 #account-details aside nav {
   margin-top: 50px;
   text-align: left;
@@ -877,4 +890,171 @@ footer .copyright p {
 }
 #task-manager .container .content .btn-theme {
   width: 40%;
+}
+
+#subscribe {
+  background-color: #F3F6FF;
+  padding: 4rem 0;
+}
+#subscribe h2 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 40px !important;
+}
+#subscribe .container {
+  width: 55%;
+}
+#subscribe .container .title {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#subscribe .container .title h2 {
+  font-size: 2.5em;
+}
+#subscribe .container form {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+}
+#subscribe .container form h4 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 24px !important;
+}
+#subscribe .container form .alternative {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+}
+#subscribe .container form .alternative .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+#subscribe .container form .alternative .options .checkbox-group .input-group {
+  display: flex !important;
+  gap: 7px;
+}
+#subscribe .container form .form-email {
+  display: grid;
+  align-items: start;
+  grid-template-columns: 1fr auto;
+  gap: 1.5rem;
+}
+#subscribe .container form .form-email .input-group {
+  position: relative;
+}
+#subscribe .container form .form-email .input-group i {
+  position: absolute;
+  left: 20px;
+  top: 17px;
+  font-size: 1.3em;
+}
+#subscribe .container form .form-email .input-group input {
+  padding-left: 55px;
+}
+
+.courses {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+.courses .container #form-filters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  gap: 15px;
+}
+.courses .container #form-filters h1 {
+  flex: 1;
+}
+.courses .container .course-items {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2rem;
+}
+.courses .container .course-items .course {
+  position: relative;
+  display: block;
+  border-radius: 8px;
+  overflow: hidden;
+  text-decoration: none;
+  box-shadow: 0 0 14px -4px #B4B7C9;
+  color: #565973;
+}
+.courses .container .course-items .course:hover {
+  box-shadow: 0 0 14px -4px gray-900;
+}
+.courses .container .course-items .course .bestseller {
+  color: white;
+  background-color: #22C55E;
+  position: absolute;
+  top: 1.5rem;
+  left: 1rem;
+  padding: 4px 12px;
+  border-radius: 4px;
+}
+.courses .container .course-items .course .bookmark {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 999;
+}
+.courses .container .course-items .course img {
+  width: 100%;
+}
+.courses .container .course-items .course .content {
+  padding: 1rem 2rem;
+}
+.courses .container .course-items .course .content .title {
+  font-size: 20px;
+}
+.courses .container .course-items .course .content .author {
+  font-size: 14px;
+  margin: 0.5rem 0;
+}
+.courses .container .course-items .course .content .pricing {
+  display: flex;
+  gap: 1rem;
+  font-size: 18px;
+  font-weight: 600;
+}
+.courses .container .course-items .course .content .pricing .discount {
+  color: #EF4444;
+  font-size: 18px;
+  font-weight: 600;
+}
+.courses .container .course-items .course .content .pricing .original {
+  font-size: 18px;
+  font-weight: 600;
+}
+.courses .container .course-items .course .content .pricing .discount-enabled {
+  color: #9397AD;
+  text-decoration: line-through;
+  font-size: 18px;
+  font-weight: 400;
+}
+.courses .container .course-items .course .content .footer {
+  color: #9397AD;
+  border-top: 1px solid #D4D7E5;
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  padding-top: 1rem;
+}
+.courses .container .course-items .course .content .footer .hours i {
+  margin-right: 5px;
+}
+.courses .container .course-items .course .content .footer .likes {
+  margin-right: 5px;
 }
