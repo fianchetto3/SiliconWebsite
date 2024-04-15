@@ -8,5 +8,6 @@ namespace SiliconWebbApp.Models.Views
         public string Title { get; set; } = "";
 
         public ShowcaseViewModel Showcase { get; set; } = null!;
+        
     }
 }

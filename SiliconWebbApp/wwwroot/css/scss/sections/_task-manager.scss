@@ -1,0 +1,40 @@
+#task-manager {
+    padding-top: 100px;
+
+    p {
+        @include text-m;
+        color: $gray-700;
+    }
+
+    .container {
+        img {
+            position: relative;
+            left: -15%;
+            right: 0;
+        }
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+        position: relative;
+
+        .content {
+
+            h2 {
+                @include h1;
+            }
+
+            .list {
+
+                i {
+                    color: #6366F1;
+                }
+            }
+
+            .btn-theme {
+                width: 40%;
+            }
+        }
+    }
+}

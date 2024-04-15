@@ -809,3 +809,72 @@ footer .copyright p {
   display: flex;
   gap: 20px;
 }
+
+#display {
+  padding-bottom: 70px;
+  background: linear-gradient(to right, #0B0F19 0%, #0B0F19 50%, white 50%, white 100%);
+}
+#display .container {
+  padding-top: 100px;
+}
+#display .container .header {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 40px !important;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+}
+#display .container .header .text-left-white {
+  color: white;
+}
+#display .container .laptop-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#task-manager {
+  padding-top: 100px;
+}
+#task-manager p {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+  color: #565973;
+}
+#task-manager .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  position: relative;
+}
+#task-manager .container img {
+  position: relative;
+  left: -15%;
+  right: 0;
+}
+#task-manager .container .content h2 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 40px !important;
+}
+#task-manager .container .content .list i {
+  color: #6366F1;
+}
+#task-manager .container .content .btn-theme {
+  width: 40%;
+}

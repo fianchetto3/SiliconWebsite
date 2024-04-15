@@ -1,0 +1,28 @@
+
+#display {
+    padding-bottom: 70px;
+    background: linear-gradient( to right, #0B0F19 0%, #0B0F19 50%, white 50%, white 100% );
+
+    .container {
+        padding-top: 100px;
+
+        .header {
+            @include h1;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+
+            .text-left-white {
+                color: white;
+            }
+        }
+
+        .laptop-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+}
