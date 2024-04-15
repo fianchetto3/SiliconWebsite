@@ -1058,3 +1058,114 @@ footer .copyright p {
 .courses .container .course-items .course .content .footer .likes {
   margin-right: 5px;
 }
+
+#download {
+  background-color: #F3F6FF;
+}
+#download .container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #EFF2FC;
+  padding: 4rem 1rem;
+}
+#download .container .phone-img {
+  flex: 1;
+}
+#download .container .phone-img .iphone {
+  position: absolute;
+}
+#download .container .phone-img .group {
+  position: relative;
+  left: 90px;
+  bottom: 40px;
+}
+#download .container .content {
+  flex: 1;
+}
+#download .container .content h2 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 40px !important;
+  width: 60%;
+}
+#download .container .content .app-items {
+  margin: 3rem 0;
+}
+#download .container .content .app-items .store-title {
+  color: #9397AD;
+}
+#download .container .content .app-items .rating {
+  margin-bottom: 10px;
+}
+#download .container .content .app-items .rating i {
+  color: #FFBA08;
+}
+#download .container .content .app-items .editor {
+  display: flex;
+  gap: 40px;
+}
+#download .container .content .app-items .editor .editor-info h4 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 24px !important;
+}
+#download .container .content .app-items .editor .editor-info .stats {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+  color: #565973;
+}
+#integrate {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+#integrate p {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-size: 16px !important;
+}
+#integrate .container {
+  text-align: center;
+  display: grid;
+}
+#integrate .container .header {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+#integrate .container .header h2 {
+  line-height: 160%;
+  font-weight: 400;
+  color: #565973;
+  font-family: "Manrope", sans-serif;
+  font-weight: 800;
+  color: #0B0F19;
+  font-size: 40px !important;
+}
+#integrate .container .header p {
+  color: #9397AD;
+}
+#integrate .container .tools {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 60px;
+}
+#integrate .container .tools tool-item {
+  text-align: left;
+}
+#integrate .container .tools tool-item p {
+  padding: 1rem;
+}

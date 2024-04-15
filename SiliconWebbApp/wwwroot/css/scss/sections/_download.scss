@@ -1,0 +1,69 @@
+#download {
+    background-color: $gray-100;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        background-color: $gray-200;
+        padding: 4rem 1rem;
+
+        .phone-img {
+            flex: 1;
+
+            .iphone {
+                position: absolute;
+            }
+
+            .group {
+                position: relative;
+                left: 90px;
+                bottom: 40px;
+            }
+        }
+
+        .content {
+            flex: 1;
+
+            h2 {
+                @include h1;
+                width: 60%;
+            }
+
+            .app-items {
+                margin: 3rem 0;
+
+                .store-title {
+                    color: $gray-600;
+                }
+
+                .rating {
+                    margin-bottom: 10px;
+
+                    i {
+                        color: #FFBA08;
+                    }
+                }
+
+                .editor {
+                    display: flex;
+                    gap: 40px;
+
+                    .editor-info {
+
+                        h4 {
+                            @include h4;
+                        }
+
+                        .stats {
+                            @include text-m;
+                            color: $gray-700;
+                        }
+                    }
+
+                    img {
+                    }
+                }
+            }
+        }
+    }
+}
