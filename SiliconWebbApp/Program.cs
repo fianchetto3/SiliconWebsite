@@ -3,6 +3,12 @@ using SiliconInfrastructure.Context;
 using SiliconInfrastructure.Entities;
 using SiliconInfrastructure.Services;
 
+///<summary>
+///  Infrastructure projektet används ej som backend till detta projekt utan  "SiliconInfrastructure" är backend delen som hanterar allt med hjälp av Identity.
+///  Infrastructure kan därav bara ignoreras. 
+///  
+/// </summary>
+
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddAuthentication("AuthCookie").AddCookie("AuthCookie", x =>
