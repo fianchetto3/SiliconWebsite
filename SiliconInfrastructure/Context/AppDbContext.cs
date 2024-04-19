@@ -16,9 +16,7 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : IdentityDbCo
         modelBuilder.Entity<AddressEntity>()
             .HasKey(a => a.Id);
 
-        modelBuilder.Entity<AddressEntity>()
-            .Property(a => a.Id)
-            .ValueGeneratedOnAdd();
+  
 
         modelBuilder.Entity<UserEntity>()
              .HasOne(u => u.Address)

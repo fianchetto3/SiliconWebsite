@@ -38,7 +38,7 @@ public class HomeController(HttpClient httpClient) : Controller
         {
             TempData["StatusMessage"] = "Something went wrong";
         }
-        return RedirectToAction("Home", "Index");
+        return RedirectToAction("Index", "Home");
     }
 
 }

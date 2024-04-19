@@ -10,15 +10,27 @@
             align-items: center;
             margin-bottom: 1rem;
             gap: 15px;
+
             h1 {
+                @include h1;
                 flex: 1;
             }
 
             select {
+                padding: 17px 40px;
+                border: 1px solid $gray-400;
+                border-radius: 5%;
+                background-color: white;
+                @include text-s;
+                color: $gray-700;
+                 
             }
 
             .input-search-group {
-                
+              i{
+                 position: relative;
+                 left: -35px;
+              }
             }
         }
 
@@ -42,7 +54,7 @@
 
                 .bestseller {
                     color: white;
-                    background-color:#22C55E;
+                    background-color: #22C55E;
                     position: absolute;
                     top: 1.5rem;
                     left: 1rem;
